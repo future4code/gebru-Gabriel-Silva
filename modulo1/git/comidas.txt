@@ -1,0 +1,10 @@
+1. pizza
+2. sushi
+3. churrasco
+4. pipoca
+5. macarronada
+6. peixe 
+7. hamburguer
+8. gelatina
+9. torta salgada
+10. açai
