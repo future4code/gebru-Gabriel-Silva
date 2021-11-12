@@ -49,6 +49,7 @@ console.log("O primeiro numero é divisível pelo segundo? - "+((numeroUm % nume
 console.log("O segundo numero é divisível pelo primeiro? - "+((numeroDois % numeroUm) === 0))
 
 // desafio
+// Escala de conversão
 let fahrenheit = 77
 
 let celsius = 80
@@ -67,37 +68,37 @@ console.log((celsius * (9/5) + 32)+" F° "+escalaConversaoCK+" K°")
 celsius = Number(prompt("Digite o valor em celsius"))
 console.log((celsius * (9/5) + 32)+" F° "+(((celsius * (9/5)) * (5/9)) + 273.15)+" K°")
 
-///
+/// Calculo de Quilowatt
 
 let valorQuilowattHora = 0.05
 console.log("R$ "+280 * valorQuilowattHora)
 console.log("R$ "+(14 - (280 * valorQuilowattHora) * (15/100)))
-//
+
+// Conversão de valores
 let libra = 20
 let libraParaKg = (libra / 2.2046)
 console.log("20lb equivalem a "+libraParaKg+" kg")
-
+//
 let oz = 10.5
 let ozParaKg = (oz / 35.274)
 console.log("10oz equivalem a "+ozParaKg+" kg")
-
+//
 let milha = 100
 let milhaParaMetro = (milha / 0.00062137)
 console.log("100mi equivalem a "+milhaParaMetro+" m")
-
+//
 let pes = 50
 let pesParaMetro = (pes / 3.2808)
 console.log("50ft equivalem a "+pesParaMetro+" m")
-
-
+//
 let galao = 103.56
 let galaoParaLitro = (galao / 0.26417)
 console.log("103.56gal equivalem a "+galaoParaLitro+" l")
-
+//
 let xicara = 450
 let xicaraParaLitro = (xicara * 0.24)
 console.log("450 xic equivalem a "+xicaraParaLitro+" l")
-
+//
 let libra = Number(prompt("digite o valor que deseja converter?"))
 let libraParaKg = (libra / 2.2046)
 console.log(libra+" lb equivalem a "+libraParaKg+" kg")
