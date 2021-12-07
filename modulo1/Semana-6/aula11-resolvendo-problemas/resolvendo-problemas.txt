@@ -1,0 +1,14 @@
+os setes passos fundamentais para resolução de problemas são:
+1° ter atenção ao enunciado, pois o mesmo irá dizer o que quer,
+após isso pensar no conforme o enunciado, oque o codigo irá dizer.
+2° retirar informações relevantes do codigo, pois de lá que iremos ter uma ideia 
+de tirar palavras relevantes que poderão compor o codigo.
+3° pensar nas entradas e saídas, quais são os dados que irão entrar, como eles entrarão
+como esses dados podem sair.
+4° fazer um esquema visual, usando diagramas, visualizando como o codigo irá funcionar
+5° fazer um código feio, pensar em soluções e analisar qual faz mais sentido e 
+ir tentando fazer apenas visando o objetivo final
+6° testar o código que foi escrito e verficando se há erros ou não e ir ajustando
+os possiveis erros
+7° refatorar o nosso código, melhorando nomes, aplicar soluções que antes não foram
+vistas mas que agora seria mais eficaz.
