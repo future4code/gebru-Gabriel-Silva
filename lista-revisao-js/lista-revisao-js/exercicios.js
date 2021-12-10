@@ -184,7 +184,7 @@ function retornaContasComSaldoAtualizado(contas) {
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
     
 
-
+    return consultas.sort((a, b) => (a.nome > b.nome) ? 1 : ((b.nome > a.nome) ? -1 : 0))
 	
 	
 
