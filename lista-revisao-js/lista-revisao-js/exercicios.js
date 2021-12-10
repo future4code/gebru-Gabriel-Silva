@@ -148,6 +148,12 @@ function retornaPessoaAnonimizada(pessoa) {
 function retornaPessoasAutorizadas(pessoas) {
     
 
+    let apenasPessoasautorizadas = pessoas.filter((autorizados, indice, array) => {
+        return autorizados.altura >= 1.5 && autorizados.idade > 14 && autorizados.idade < 60
+       })
+       
+   
+       return apenasPessoasautorizadas
 
 
 
