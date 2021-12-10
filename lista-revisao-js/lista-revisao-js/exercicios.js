@@ -162,6 +162,12 @@ function retornaPessoasAutorizadas(pessoas) {
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
+    let apenasPessoasNaoAutorizadas = pessoas.filter((naoAutorizados, indice, array) => {
+        return naoAutorizados.altura < 1.5 || naoAutorizados.idade <= 14 || naoAutorizados.idade > 60
+       })
+       
+   
+       return apenasPessoasNaoAutorizadas
    
     
     
