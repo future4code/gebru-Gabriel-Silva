@@ -59,6 +59,10 @@ return arrayy
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
 
+    let maiorNumero = Math.max(...array)
+return maiorNumero
+
+
 
 
   
