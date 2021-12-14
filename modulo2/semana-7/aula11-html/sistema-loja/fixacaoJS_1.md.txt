@@ -1,0 +1,15 @@
+
+ˋˋˋ
+function calculaSalario(qtdeCarrosVendidos, valorTotalVendas) {
+ // Escreva seu código aqui
+ salarioFixo = 2000
+ comissaoPorcentagem = valorTotalVendas * 5/100 
+ valorPorCarro = qtdeCarrosVendidos * 100
+ total = salarioFixo + comissaoPorcentagem + valorPorCarro
+ return total
+ 
+ 
+
+}
+
+ˋˋˋ
