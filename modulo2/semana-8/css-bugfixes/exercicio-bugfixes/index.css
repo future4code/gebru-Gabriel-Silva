@@ -96,6 +96,13 @@ div:last-child {
     text-align: center;
 }
 
+.imgs{
+    background-color: white;
+    width: 50px;
+}
+
+
+
 table {
     width: 60%;
     text-align: center;   
