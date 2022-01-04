@@ -100,7 +100,10 @@ div:last-child {
     background-color: white;
     width: 50px;
 }
-
+#lupa{
+    background-color: white;
+    width: 20px;
+}
 
 
 table {
