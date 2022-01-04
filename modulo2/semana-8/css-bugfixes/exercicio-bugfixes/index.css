@@ -104,6 +104,12 @@ div:last-child {
     background-color: white;
     width: 20px;
 }
+.comprar:hover{
+    background-color: yellow;
+}
+.comprar:active{
+    color: rgb(255, 255, 255);
+}
 
 
 table {
