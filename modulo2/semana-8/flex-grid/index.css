@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+/* header */
+header > button{
+    height: 21px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+div > a > img{
+    width: 25px;
+    padding-left: 10px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: mediumvioletred;
+
+}
+#logo{
+    display: flex;
+    justify-content: start;
+    padding-top: 5px;
+}
+#logo > h2 {
+    margin: 0;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+
+/* article-nav */
+.icones{
+    height: 18px;
+    padding-right: 11px;
+}
+.icones-2{
+    height: 18px;
+    padding-left: 50px;
+}
+.bolo{
+    height: 158px;
+}
+.home{
+    padding-right: 37px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold
+}
+.perfil{
+    padding-right: 31px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold
+}
+.link{
+    text-decoration: none;
+    color: black;
+    font-weight: bold
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+#menu-nav{
+    background-color: #f2d0e0;
+    
+    
+}
+.container-nav{
+    display: flex;
+    padding-top: 15px;
+    padding-left: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+/* article-anuncios */
+
+#anuncios{
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+}
+
+
+
+figure{
+    border:solid darkgray;
+}
+figure > p{
+    text-align: center;
+}
+.bolo{
+    width: 200px;
+}
+figcaption{
+    text-align: center;
+    color: black;
+    font-weight: bold
+}
+
+
+/* footer */
+footer{
+    background-color:mediumvioletred;
+    text-align: center;
+}
