@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.txtBusca{
+    padding: 20px 0;
+}
+.img{
+    height: 250px;
+    width: 250px;
+}
+.figuras{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+figure{
+    border: solid;
+    margin: 20px 30px;
+}
+figcaption{
+    padding: 20px 1px;
+    
+}
+video{
+    height: 500px;
+    width: 1000px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+.video{
+    text-align: center
+}
+.video h2{
+    text-align: left;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+footer{
+    background-color: slategray;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
