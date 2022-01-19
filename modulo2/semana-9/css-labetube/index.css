@@ -9,12 +9,17 @@ header{
     justify-content: space-between;
     padding: 20px;
 }
+body{
+    min-width: 350px
+}
+
 .txtBusca{
     padding: 20px 0;
 }
 .img{
     height: 250px;
     width: 250px;
+    object-fit: cover;
 }
 .figuras{
     display: flex;
