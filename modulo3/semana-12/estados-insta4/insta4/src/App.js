@@ -13,24 +13,87 @@ const MainContainer = styled.div`
 `
 
 class App extends React.Component {
+  state = {
+  
+    usuarios: [
+      
+      {
+        nomeUsuario: "paulinha",
+        fotoUsuario:'https://picsum.photos/50/50',
+        fotoPost: "https://picsum.photos/200/150"
+      },
+      {
+        nomeUsuario: "Gabriel",
+        fotoUsuario:Foto1,
+        fotoPost: Foto1
+      },
+      {
+        nomeUsuario: "Lucas",
+        fotoUsuario:Foto3,
+        fotoPost: Foto3
+      }
+    ],
+    valorInputUsuario: "",
+    valorInputFotoUsuario: "",
+    valorInputFotoPost: ""
+  };
+  adicionaPessoa = () => {
+
+    const novoUsuario = {
+      nomeUsuario: this.state.valorInputUsuario,
+      fotoUsuario: this.state.valorInputFotoUsuario,
+      fotoPost: this.state.valorInputFotoPost
+    };
+
+    const novoPessoas = [...this.state.usuarios,novoUsuario];
+
+    this.setState({ usuarios: novoPessoas });
+  };
+
+  onChangeInputUsuario = (event) => {
+  
+    this.setState({ valorInputUsuario: event.target.value });
+  };
+
+  onChangeInputFotoUsuario = (event) => {
+ 
+    this.setState({ valorInputFotoUsuario: event.target.value });
+  };
+  onChangeInputFotoPost = (event) => {
+    this.setState({valorInputFotoPost: event.target.value });
+  };
+
+  
   render() {
+    const usuarioNovos = this.state.usuarios.map((usuario) =>{
+      return(<Post
+        nomeUsuario={usuario.nomeUsuario}
+        fotoUsuario={usuario.fotoUsuario}
+        fotoPost={usuario.fotoPost}
+      />);
+    });
     return (
       <MainContainer>
-        <Post
-          nomeUsuario={'paulinha'}
-          fotoUsuario={'https://picsum.photos/50/50'}
-          fotoPost={'https://picsum.photos/200/150'}
-        />
-        <Post
-          nomeUsuario={'Gabriel'}
-          fotoUsuario={Foto1}
-          fotoPost={Foto2}
-        />
-        <Post
-          nomeUsuario={'Lucas'}
-          fotoUsuario={Foto3}
-          fotoPost={Foto3}
-        />
+         <div>{usuarioNovos}</div>
+         <input
+
+            value={this.state.valorInputUsuario}
+            onChange={this.onChangeInputUsuario}
+            placeholder={"Nome"}
+          />
+          <input
+            value={this.valorInputFotoUsuario}
+            onChange={this.onChangeInputFotoUsuario}
+            placeholder={"foto usuario"}
+          />
+          <input
+            value={this.state.valorInputFotoPost}
+            onChange={this.onChangeInputFotoPost}
+            placeholder={"foto post"}
+          />
+
+          <button onClick={this.adicionaPessoa}>Adicionar</button>
+          
       </MainContainer>
     );
   }
