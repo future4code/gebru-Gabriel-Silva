@@ -12,8 +12,7 @@ class App extends React.Component {
        <input/> <input/> <button>Criar Usuário</button>
     </div>
 
-
-
+    
   );
 }}
 
