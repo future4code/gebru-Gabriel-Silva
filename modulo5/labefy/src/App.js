@@ -1,6 +1,7 @@
 import React from "react";
 import CriarPlaylist from "./page/CriarPlaylist";
 import VisualizarPlaylist from "./page/VisualizarPlaylist";
+import MusicasPlaylist from "./page/MusicasPlaylist";
 
 class App extends React.Component{
   
@@ -10,6 +11,7 @@ class App extends React.Component{
       <div>
        <CriarPlaylist/>
        <VisualizarPlaylist/>
+       <MusicasPlaylist/>
       </div>
     );
   }
