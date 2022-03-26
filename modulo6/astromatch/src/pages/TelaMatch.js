@@ -1,10 +1,25 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 
-function TelaMatch() {
+function TelaMatch(props) {
+  const matches = () => { props.matchs.map((mat) =>{
+
+    return(
+      <div>
+        <img src={mat.photo}/>
+        <p>{mat.name}</p>
+      </div>
+    )
+  })
+
+  }
+    
   return (
     <div >
-      hello world
+  
+         <button onClick={props.trocarDeTela}>TelaInicial</button>
+         {matches}
+      
     </div>
   );
 }
