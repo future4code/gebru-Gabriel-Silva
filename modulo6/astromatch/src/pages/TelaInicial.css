@@ -1,0 +1,15 @@
+*{
+    max-width: 350px;
+}
+
+header{
+    text-align: center;
+}
+
+header div{
+    display: inline-block;
+    margin: 0 20px   
+}
+header div button{
+    margin-left:  20px   
+}
