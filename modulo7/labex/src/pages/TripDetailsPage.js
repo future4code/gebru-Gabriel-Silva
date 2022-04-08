@@ -14,7 +14,7 @@ function TripDetailsPage() {
   
   useEffect(() => {
     const URL =
-      `https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-luiz-gebru/trip/${id.id}";`
+      `https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-luiz-gebru/trip/${id.id}`
     const headers = {
       headers: {
         auth: localStorage.getItem("token")

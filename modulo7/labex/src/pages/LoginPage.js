@@ -2,28 +2,23 @@ import axios from "axios";
 import { useState } from "react";
 import { goToTripDetails } from "../routes/Coordinator";
 import { useNavigate } from "react-router-dom";
+import useForm from "../customHooks/useForm";
+import { useProtectedPage } from "../customHooks/useProtectPage";
 
 const LoginPage = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+ 
+  useProtectedPage()
   const navigate = useNavigate();
+  const { form, onChange } = useForm({ email: "", password:""})
 
-  const onChangeEmail = (event) => {
-    setEmail(event.target.value);
-  };
 
-  const onChangePassword = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const onSubmitLogin = () => {
-    // console.log(email, password);
-    // user: astrodev@gmail.com.br  password: 123456
-    const URL =
-      "https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-luiz-gebru/login";
+  const onSubmitLogin = (e) => {
+    e.preventDefault()
+   
+    const URL ="https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-luiz-gebru/login";
     const body = {
-      email: email,
-      password: password
+      email: form.email,
+      password: form.password
     };
 
     axios
@@ -36,27 +31,39 @@ const LoginPage = () => {
         console.log("ERRO:", err.response);
       });
   };
-  // para deslogar: limpar o token
-  // localStorage.removeItem("token");
+  
 
   return (
     <div>
-      <input
-        placeholder="email"
-        type="email"
-        value={email}
-        onChange={onChangeEmail}
-      />
-      <input
-        placeholder="password"
-        type="password"
-        value={password}
-        onChange={onChangePassword}
-      />
-      <button onClick={onSubmitLogin}>Enviar</button>
-    </div>
+             <h1>Login</h1>
+             <form onSubmit={onSubmitLogin}>
+                <input
+                    placeholder={"E-mail"}
+                   type={"email"}
+                    name={"email"}
+                    value={form.email}
+                    onChange={onChange}
+                     required
+                 />
+                <input
+                     placeholder={"Senha"}
+                     type={"password"}
+                     name={"password"}
+                     value={form.password}
+                     onChange={onChange}
+                     required
+                 />
+                 
+                   {/*  <button onClick={() => goToHomePage(history)}>Voltar</button> */}
+                    <button>Enviar</button>
+                 
+                 
+             </form>        
+             
+     </div>
+     
+    
   );
 };
-
 
 export default LoginPage
