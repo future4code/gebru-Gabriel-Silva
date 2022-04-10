@@ -7,10 +7,13 @@ import axios from "axios";
 
 
 
+
+
 function TripDetailsPage() {
   useProtectedPage();
   
   const [id, setId] = useState({})
+  const [tripDetails, SetTripDetails] = useState("")
   
   useEffect(() => {
     const URL =
@@ -35,8 +38,7 @@ function TripDetailsPage() {
       });
   }, []);
 
-
-  console.log(id);
+  
 
     return (
       <div>

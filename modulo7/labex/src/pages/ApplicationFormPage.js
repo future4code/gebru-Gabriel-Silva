@@ -11,10 +11,12 @@ import useForm from "../customHooks/useForm";
 
 
 function ApplicationFormPage() {
+  useProtectedPage()
+ 
   const [trips, setTrips] = useState("")
   const { form, onChange} = useForm({ name: "", age: "", applicationText: "", profession: "", country: "" })
   const navigate = useNavigate()
-  const [tripss, setTripss] = useState({})
+  const [selecionarViagem, setSelecionarViagem] = useState("")
   const pais = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua &amp; Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia &amp; Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Cape Verde", "Cayman Islands", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cruise Ship", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kuwait", "Kyrgyz Republic", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Mauritania", "Mauritius", "Mexico", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Namibia", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre &amp; Miquelon", "Samoa", "San Marino", "Satellite", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "South Africa", "South Korea", "Spain", "Sri Lanka", "St Kitts &amp; Nevis", "St Lucia", "St Vincent", "St. Lucia", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad &amp; Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks &amp; Caicos", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
  
  
@@ -39,26 +41,24 @@ function ApplicationFormPage() {
     axios
       .get(URL)
       .then((res) => {
-        setTripss(res.data.trips)
+        setSelecionarViagem(res.data.trips)
       })
       .catch((err) => {
         console.log("ERRO:", err.response);
       });
   }, []);
 
-  console.log(tripss)
+  
 
-
-  /* const tripsSelection = tripss && tripss.map((id) => {
-      return <option key={id.id} value={id.id}>{id.name}</option>
-  }) */
     return (
       <div>
         <h1>Inscreva-se para uma viagem</h1>
           <form onSubmit={onClickEnviar}>
               <select defaultValue="" onChange={e => setTrips(e.target.value)}>
                   <option value="" disabled>Escolha uma Viagem</option>
-                  {/* {tripsSelection} */}
+                  {selecionarViagem && selecionarViagem.map((id) => {
+      return <option key={id.id} value={id.id}>{id.name}</option>
+  })}
               </select>
               <input
                   placeholder={"Nome"}
@@ -109,11 +109,10 @@ function ApplicationFormPage() {
                       return <option value={pais} key={pais}>{pais}</option>
                   })}
               </select>
-              
-                  {/* <button onClick={() => goToListTripsPage(history)}>Voltar</button> */}
-                  <button>Enviar</button>
-              
+          
+                  <button>Enviar</button>    
           </form>
+          <button onClick={() => navigate(-1)}>Voltar</button> 
       </div>
     );
   }

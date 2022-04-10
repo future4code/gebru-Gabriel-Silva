@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { goToTripDetails } from "../routes/Coordinator";
+import { goToAdminHome } from "../routes/Coordinator";
 import { useNavigate } from "react-router-dom";
 import useForm from "../customHooks/useForm";
 import { useProtectedPage } from "../customHooks/useProtectPage";
@@ -25,7 +25,7 @@ const LoginPage = () => {
       .post(URL, body)
       .then((res) => {
         localStorage.setItem("token", res.data.token);
-        goToTripDetails(navigate);
+        goToAdminHome(navigate);
       })
       .catch((err) => {
         console.log("ERRO:", err.response);
@@ -52,13 +52,10 @@ const LoginPage = () => {
                      value={form.password}
                      onChange={onChange}
                      required
-                 />
-                 
-                   {/*  <button onClick={() => goToHomePage(history)}>Voltar</button> */}
-                    <button>Enviar</button>
-                 
-                 
-             </form>        
+                 />      
+                    <button>Enviar</button> 
+             </form>  
+               <button onClick={() => navigate(-1)}>Voltar</button>      
              
      </div>
      

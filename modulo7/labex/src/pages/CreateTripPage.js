@@ -94,11 +94,11 @@ function CreateTripPage() {
               required
               min={50}
           />
-          
-              {/* <button onClick={() => goToAdminHomePage(history)}>Voltar</button> */}
+
               <button>Criar</button>
           
       </form>
+           <button onClick={() => navigate(-1)}>Voltar</button>
   </div>
     );
   }
