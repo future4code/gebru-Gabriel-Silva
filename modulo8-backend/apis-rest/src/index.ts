@@ -16,4 +16,13 @@ const server = app.listen(process.env.PORT || 3003, () => {
     } else {
        console.error(`Failure upon starting server.`);
     }
+
+
+
+    
 });
+
+
+//exercicio 1 - A) Get B) Usaria um map para percorrer em cada item do array
+ 
+//exercicio 2 - A) Criando uma var e tipando ela com o type criado B) criando um ENUM e atribuindo ao type
