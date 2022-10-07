@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section-header {
+  background-color: #40e0d0;
+}
+
+header {
+  max-width: 800px;
+  margin: 0 auto;
+  
+  padding: 20px;
+}
+header form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+header input {
+  height: 40px;
+  padding: 10px;
+  border-color: white;
+  border-radius: 5px;
+  margin: 5px;
+}
+header button {
+  height: 40px;
+  width: 100px;
+  background-color: turquoise;
+  border-color: white;
+  color: white;
+  margin: 5px;
+}
+.data{
+  max-width: 800px;
+  margin: 40px auto 30px auto;
+  text-align: center;
+}
+table{
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 400px;
+ 
+
+}
+th, td {
+   color: grey;
+  height: 35px;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th:last-child{
+  text-align: center;
+}
+td:last-child{
+  text-align: center;
+}
+
+.informacao{
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
